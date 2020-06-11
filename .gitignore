@@ -74,3 +74,8 @@ yarn-error.log
 
 # Build
 dist/
+
+.png
+.jpg
+.gif
+.svg
