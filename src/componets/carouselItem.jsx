@@ -1,22 +1,60 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setFavorite, deleteFavorite } from '../actions';
 import '../assets/styles/components/_carouselItem.scss';
 import playButton from '../assets/static/icons8-play-64.png';
 import plusButton from '../assets/static/icons8-más-64.png';
+import removeButton from '../assets/static/remove.png';
 
-const CarouselItem = ({ cover, title, year, contentRating, duration }) => (
-  <div className='carousel-item'>
-    <img className='carousel-item__img' src={cover} alt={title} />
-    <div className='carousel-item__details'>
-      <figure className='carousel-item__figure'>
-        <img src={playButton} />
-        <img src={plusButton} />
-      </figure>
-      <p className='carousel-item__details--title'>{title} </p>
-      <p className='carousel-item__details--subtitle'>
-        {`${year} ${contentRating} ${duration}`}
-      </p>
+const CarouselItem = (props) => {
+  const {
+    id,
+    cover,
+    title,
+    year,
+    contentRating,
+    duration,
+    setFavorite,
+    isList,
+  } = props;
+
+  const handleDeleteFavorite = (itemId) => {
+    props.deleteFavorite(itemId);
+  };
+
+  const handleSetFavorite = () => {
+    props.setFavorite({
+      id,
+      cover,
+      title,
+      year,
+      contentRating,
+      duration,
+    });
+  };
+  return (
+    <div className='carousel-item'>
+      <img className='carousel-item__img' src={cover} alt={title} />
+      <div className='carousel-item__details'>
+        <figure className='carousel-item__figure'>
+          <img src={playButton} />
+          {isList ? (
+            <img src={removeButton} onClick={() => handleDeleteFavorite(id)} />
+          ) : (
+            <img src={plusButton} onClick={handleSetFavorite} />
+          )}
+        </figure>
+        <p className='carousel-item__details--title'>{title} </p>
+        <p className='carousel-item__details--subtitle'>
+          {`${year} ${contentRating} ${duration}`}
+        </p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-export default CarouselItem;
+const mapDispatchToProps = {
+  setFavorite,
+  deleteFavorite,
+};
+export default connect(null, mapDispatchToProps)(CarouselItem);

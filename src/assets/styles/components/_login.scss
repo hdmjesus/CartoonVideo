@@ -1,0 +1,124 @@
+.flex-column-center-center,
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login {
+  background: linear-gradient(#21c88b, #ab88ff);
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
+  display: flex;
+}
+
+.login__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  padding: 60px 68px 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.login__container h2 {
+  font-size: 20px;
+}
+
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login__container--form label {
+  font-size: 14px;
+}
+
+.login__container--remember {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.login__container--remember a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login__container--remember a:hover {
+  text-decoration: underline;
+}
+
+.login_container--social-media {
+  padding: 30px 0;
+}
+
+.login_container--social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_container--social-media p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login_container--social-media figure > img {
+  width: 30px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.login__container--register {
+  font-size: 14px;
+}
+
+.login__container--register a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+
+.input--login {
+  background-color: transparent;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-bottom: 2px solid #fff;
+  margin: 20px 0;
+  padding: 0px 20px;
+  outline: transparent;
+  color: #fff;
+  font-family: 'Muli' sans-serif;
+  font-size: 16px;
+  height: 50px;
+}
+
+::placeholder {
+  color: #fff;
+}
+.login__container--iniciar-sesion {
+  text-align: center;
+}
+
+.login__container--iniciar-sesion a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.login__container--iniciar-sesion a:hover {
+  text-decoration: underline;
+}
