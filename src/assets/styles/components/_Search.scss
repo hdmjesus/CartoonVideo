@@ -1,38 +1,43 @@
 .main {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 300px;
-	border-radius: 0px 0px 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border-radius: 0px 0px 40px 40px;
 }
 
 .main__title {
-	color: white;
-	font-size: 25px;
+  color: white;
+  font-size: 25px;
 }
 .main__section--seach {
-	height: 300px;
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	grid-template-columns: 1fr;
-	grid-template-rows: 0.5fr 1fr;
+  height: 300px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+}
+
+.seach__title {
+  color: #fff;
+  font-size: 30px;
 }
 
 .input {
-	padding: 0px 30px;
-	border: 2px solid #fff;
-	border-radius: 50px;
-	height: 40px;
-	width: 70%;
-	color: #fff;
-	font-family: 'Muli';
-	font-size: 16px;
-	background-color: rgba(255, 255, 255, 0.1);
-	outline: none;
+  padding: 0px 30px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  height: 40px;
+
+  color: #fff;
+  font-family: 'Muli';
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
 }
 
 ::placeholder {
-	color: var(--whiteColor);
+  color: #fff;
 }
