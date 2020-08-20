@@ -9,9 +9,9 @@ import useInitialState from '../hooks/useInitialState';
 
 // const API = 'http://localhost:3000/initalState';
 
-const Home = ({ myList, trends, originals }) => {
+const Home = ({ user, myList, trends, originals }) => {
   // const initialState = useInitialState(API);
-  // console.log(initialState);
+  console.log(user);
   return (
     <>
       <Search />
@@ -46,6 +46,7 @@ const Home = ({ myList, trends, originals }) => {
 
 const mapStateToProps = (state) => {
   return {
+    user: state.user,
     myList: state.myList,
     trends: state.trends,
     originals: state.originals,

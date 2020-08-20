@@ -20,6 +20,30 @@ const reducer = (state, action) => {
         myList: state.myList.filter((items) => items.id !== action.payload),
       };
 
+    case actions.loginRequest:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case actions.logoutRequest:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case actions.registerRequest:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case actions.getVideoSource:
+      return {
+        ...state,
+        playing:
+          state.trends
+            .concat(state.originals)
+            .find((item) => item.id === Number(action.payload)) || [],
+      };
+
     default:
       return state;
   }
