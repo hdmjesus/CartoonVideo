@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Header from '../componets/header';
+import Footer from '../componets/footer';
 import { registerRequest } from '../actions';
 import '../assets/styles/components/_login.scss';
 
@@ -75,6 +76,7 @@ const Register = (props) => {
           </p>
         </article>
       </section>
+      <Footer isRegisterF />
     </>
   );
 };

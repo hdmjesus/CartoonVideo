@@ -2,14 +2,28 @@
 @import './media.scss';
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-size: 16px;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 body {
-	margin: 0;
-	font-family: $theme-font;
-	background: $name-color;
+  margin: 0;
+  font-family: $theme-font;
+  background: $name-color;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px0;
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginRequest } from '../actions';
 import Header from '../componets/header';
+import Footer from '../componets/footer';
 import googleIcon from '../assets/static/googleIcon.png';
 // import twitterIcon from '../assets/static/twitter-brands.svg';
 import '../assets/styles/components/_login.scss';
@@ -57,21 +58,19 @@ const Login = (props) => {
             </div>
           </form>
           <div className='login_container--social-media '>
-            <p>
-              <img src={googleIcon} alt='Google' />
-              Inicia sesion con Google
-            </p>
+            <p>Inicia sesion con Google</p>
             <p>
               {/* <img src={twitterIcon} alt='Twitter' /> */}
               Inicia sesion con Twitter
             </p>
           </div>
           <p className='login__container--register '>
-            No tienes ninguna cuenta.
+            No tienes ninguna cuenta. {''}
             <Link to='/register'>Registrate</Link>
           </p>
         </article>
       </section>
+      <Footer isLoginF />
     </>
   );
 };

@@ -7,16 +7,17 @@ import Categories from '../componets/categorys';
 import Carousel from '../componets/carousel';
 import CarouselItem from '../componets/carouselItem';
 import useInitialState from '../hooks/useInitialState';
+import Footer from '../componets/footer';
 
 // const API = 'http://localhost:3000/initalState';
 
 const Home = ({ user, myList, trends, originals }) => {
   // const initialState = useInitialState(API);
-  console.log(user);
+
   return (
     <>
-      <Header></Header>
-      <Search />
+      <Header />
+      <Search isHome />
 
       {myList.length > 0 && (
         <Categories title='Mi lista'>
@@ -42,6 +43,7 @@ const Home = ({ user, myList, trends, originals }) => {
           ))}
         </Carousel>
       </Categories>
+      <Footer />
     </>
   );
 };

@@ -41,6 +41,8 @@
 .login__container--remember {
   color: #fff;
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .login__container--remember a {
@@ -110,6 +112,7 @@
 }
 .login__container--iniciar-sesion {
   text-align: center;
+  margin-top: 15px;
 }
 
 .login__container--iniciar-sesion a {

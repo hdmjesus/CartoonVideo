@@ -4,12 +4,17 @@ const reducer = (state, action) => {
   switch (action.type) {
     case actions.setFavorite:
       if (
+        /* esta validacion, esta verificando si se encuentra un elemento
+          ya existente en myList */
         state.myList.filter((element) => element.id == action.payload.id)
           .length !== 0
+        /*De existir myList.length seria diferente de cero por lo cual si ya esta agregado */
       ) {
         return state;
       }
       return {
+        /* De no Existir el codigo sigue hasta este bloque, que agrega dicho elemento a
+          myList*/
         ...state,
         myList: [...state.myList, action.payload],
       };
