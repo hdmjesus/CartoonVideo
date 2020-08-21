@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../assets/styles/app.scss';
 import Search from '../componets/search';
+import Header from '../componets/header';
 import Categories from '../componets/categorys';
 import Carousel from '../componets/carousel';
 import CarouselItem from '../componets/carouselItem';
@@ -14,6 +15,7 @@ const Home = ({ user, myList, trends, originals }) => {
   console.log(user);
   return (
     <>
+      <Header></Header>
       <Search />
 
       {myList.length > 0 && (

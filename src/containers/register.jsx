@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { registerRequest } from '../actions';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Header from '../componets/header';
+import { registerRequest } from '../actions';
 import '../assets/styles/components/_login.scss';
 
 const Register = (props) => {
@@ -25,53 +26,56 @@ const Register = (props) => {
   };
 
   return (
-    <section className='login'>
-      <article className='login__container'>
-        <h2 tabIndex='0'>Registrate</h2>
-        <form
-          action=''
-          className='login__container--form'
-          onSubmit={handleSubmit}>
-          <input
-            name='name'
-            aria-label=' Nombre'
-            className='input--login'
-            type='text'
-            placeholder='Nombre'
-            onChange={handleInput}
-          />
-          <input
-            name='email'
-            aria-label=' Correo'
-            className='input--login'
-            type='email'
-            placeholder='Correo'
-            onChange={handleInput}
-          />
-          <input
-            name='contraseña'
-            aria-label=' Contraseña'
-            className='input--login'
-            type='password'
-            placeholder='Contraseña'
-            onChange={handleInput}
-          />
-          <input
-            name='contraseñaConfirmada'
-            aria-label=' Confirma la contraseña'
-            className='input--login'
-            type='password'
-            placeholder='Confirma la contraseña'
-            onChange={handleInput}
-          />
-          <button className='button'>Regristrame</button>
-        </form>
+    <>
+      <Header isRegister />
+      <section className='login'>
+        <article className='login__container'>
+          <h2 tabIndex='0'>Registrate</h2>
+          <form
+            action=''
+            className='login__container--form'
+            onSubmit={handleSubmit}>
+            <input
+              name='name'
+              aria-label=' Nombre'
+              className='input--login'
+              type='text'
+              placeholder='Nombre'
+              onChange={handleInput}
+            />
+            <input
+              name='email'
+              aria-label=' Correo'
+              className='input--login'
+              type='email'
+              placeholder='Correo'
+              onChange={handleInput}
+            />
+            <input
+              name='contraseña'
+              aria-label=' Contraseña'
+              className='input--login'
+              type='password'
+              placeholder='Contraseña'
+              onChange={handleInput}
+            />
+            <input
+              name='contraseñaConfirmada'
+              aria-label=' Confirma la contraseña'
+              className='input--login'
+              type='password'
+              placeholder='Confirma la contraseña'
+              onChange={handleInput}
+            />
+            <button className='button'>Regristrame</button>
+          </form>
 
-        <p className='login__container--iniciar-sesion'>
-          <Link to='/login'>Iniciar Sesion</Link>
-        </p>
-      </article>
-    </section>
+          <p className='login__container--iniciar-sesion'>
+            <Link to='/login'>Iniciar Sesion</Link>
+          </p>
+        </article>
+      </section>
+    </>
   );
 };
 
