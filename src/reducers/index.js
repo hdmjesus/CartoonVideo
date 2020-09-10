@@ -8,7 +8,7 @@ const reducer = (state, action) => {
           ya existente en myList */
         state.myList.filter((element) => element.id == action.payload.id)
           .length !== 0
-        /*De existir myList.length seria diferente de cero por lo cual si ya esta agregado */
+        /*De existir myList.length seria diferente de cero por lo cual(es true) ya esta agregado */
       ) {
         return state;
       }
@@ -23,6 +23,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         myList: state.myList.filter((items) => items.id !== action.payload),
+        /*  Aca se crea un nuevo arreglo con todos los elementos que ya contenia myList ,
+        excepto por los diferentes(!==) a action.payload, la condicion es true cada vez
+        que un valor es diferente a action.payload*/
       };
 
     case actions.loginRequest:
